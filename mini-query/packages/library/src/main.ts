@@ -1,7 +1,7 @@
 class MiniQuery {
-  private element: HTMLElement[];
-  constructor(selector: string) {
-    this.element = Array.from(document.querySelectorAll(selector));
+  private element: Element[];
+  constructor(selector: string, container?: Element) {
+    this.element = Array.from((container ?? document).querySelectorAll(selector));
   }
 
   length() {
@@ -9,6 +9,6 @@ class MiniQuery {
   }
 }
 
-export const $ = (selector: string) => {
-  return new MiniQuery(selector);
+export const $ = (selector: string, container?: Element) => {
+  return new MiniQuery(selector, container);
 };

@@ -1,0 +1,16 @@
+{
+  "name": "mini-query",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspace @sixone0712/mini-query build",
+    "test": "yarn workspace @sixone0712/mini-query test"
+  },
+  "author": "",
+  "license": "MIT"
+}
